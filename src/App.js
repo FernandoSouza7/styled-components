@@ -7,7 +7,7 @@ import { GlobalStyle } from "./Components/GlobalStyle";
 function App() {
   return (
     <>
-      <GlobalStyle/>
+      <GlobalStyle />
       <Cabecalho />
       <Container />
     </>

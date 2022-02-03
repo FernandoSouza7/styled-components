@@ -5,15 +5,10 @@ import privado from "../../assets/images/privado.svg";
 import olho_icone from "../../assets/images/olho.svg";
 import dinheiro from "../../assets/images/dinheiro.svg";
 
-import { Icone, Box, Saldo, Botao, Detalhe} from "../UI/index";
+import { Icone, Box, Botao, Saldo, Detalhe } from "../../Components/UI";
 
 const IconeMargin = styled(Icone)`
-margin-top: 2px;
-`;
-
-const BoxSaldo = styled.div`
-fontSize: "26px";
-padding: "20px 0";
+  margin-top: 2px;
 `;
 
 const Conta = () => {
@@ -26,7 +21,7 @@ const Conta = () => {
   return (
     <Box>
       <h2>Conta</h2>
-      <BoxSaldo>
+      <div style={{ fontSize: "26px", padding: "20px 0" }}>
         Saldo disponível{" "}
         <span>
           <Icone src={dinheiro} alt="Ícone Saldo" />
@@ -36,7 +31,7 @@ const Conta = () => {
             <Detalhe>R$</Detalhe> 0,00{" "}
           </Saldo>
         ) : null}
-      </BoxSaldo>
+      </div>
 
       <Botao onClick={toggleHandler}>
         <IconeMargin
